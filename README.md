@@ -7,4 +7,4 @@ Please fork this repository to create a copy for this in your personal git repo.
 2. Create folders in your repo as `js-exercise-{program-number}` (example: `js-exercise-1` )
 3. Push to your own repo.
 
-#### NOTE: Please don't push any thing to `https://github.com/BoTreeConsultingTeam/js-tasks`.
+#### NOTE: Please don't push any directly thing to `https://github.com/BoTreeConsultingTeam/js-tasks`.
