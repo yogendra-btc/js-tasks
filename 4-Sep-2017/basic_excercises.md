@@ -12,7 +12,7 @@ Check whether a input year is a leap year.
 
 Word Count: Given a statement, count the occurrences of each word in that statement.
 
-For example for the input "javascript team this is just to jest javascript concepts"
+For example for the input "javascript team this is just to test javascript concepts"
 
 ```javascript
 javascript: 2
