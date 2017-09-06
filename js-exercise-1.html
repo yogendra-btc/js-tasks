@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <input type=" number" id="input-value" value="0"/>
+        <input type="button" name="add" value="+" onclick="add('add')"/>
+        <input type="button" name="sub" value="-" onclick="add('sub')"/>
+        <input type="button" name="mul" value="*" onclick="add('mul')"/>
+        <input type="button" name="div" value="/" onclick="add('div')"/></br>
+        <button id="getResult" onclick="getResult()">Get Result</button>
+        <script>
+            var result;
+            var operator;
+            function add(action){
+                pattern = /^[0-9.]+/
+                if(!pattern.test(document.getElementById('input-value').value)){
+                    return;
+                }
+                if(result == undefined){
+                        result = parseFloat(document.getElementById('input-value').value);
+                    }
+                else if(document.getElementById('input-value').value != undefined){
+                    if(action == 'add'){
+                        result = result + parseFloat(document.getElementById('input-value').value);
+                    }
+                    else if(action == 'sub'){
+                        result = result - document.getElementById('input-value').value;
+                    }
+                    else if(action == 'mul'){
+                        result = result * document.getElementById('input-value').value;
+                    }
+                    else{
+                        result = result / document.getElementById('input-value').value;
+                    }
+                    }
+                    console.log(result)
+                    document.getElementById('input-value').value = "";
+            }
+
+            function getResult(){
+                document.getElementById('input-value').value = result;
+            }
+        </script>
+    </body>
+</html>

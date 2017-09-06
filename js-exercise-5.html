@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <input type="text" id="range" placeholder="enter number"/></br>
+        <button onclick="getResult()">Get Result</button>
+        <label id="result"></label>
+        <script>
+            function getResult(){
+                range_number = document.getElementById('range').value;
+                n = range_number;
+                arr = [];
+                for(var i=1;i<=range_number;i++){
+                    arr.push(i);
+                }
+                while(n>1){
+                    arr = arr.slice(3).concat(arr.slice(0,2))
+                    n = n - 1;
+                }
+                document.getElementById('result').innerHTML = "Winner is : "+arr[1];
+            }
+        </script>
+    </body>
+</html>

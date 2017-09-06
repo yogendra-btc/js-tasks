@@ -1,0 +1,29 @@
+<html>
+        <body>
+            <input type="text" id="year" aria-placeholder="enter year"/></br>
+            <button onclick="getResult()">Get Result</button></br>
+            <label id="result"></label>
+            <script>
+                
+                function getResult(){
+                    year = document.getElementById("year").value;
+                    if(year % 4 == 0){
+                        if(year % 100 == 0){
+                            if(year % 400 == 0){
+                                document.getElementById('result').innerHTML = "leap year";
+                            }
+                            else{
+                                document.getElementById('result').innerHTML = "not a leap year";
+                            }
+                        }
+                        else{
+                            document.getElementById('result').innerHTML = "leap year";
+                        }
+                    }
+                    else{
+                        document.getElementById('result').innerHTML = "not a leap year";
+                    }
+                }
+            </script>
+        </body>
+    </html>

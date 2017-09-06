@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <input type="text" id="data" placeholder="enter string"/>
+        <button onclick="getResult()">Get Result</button></br>
+        <label id="result"></label>
+    <script>
+        function getResult(){
+            var a = (document.getElementById('data').value).split(/(\s+)/).filter( function(e) { return e.trim().length > 0; } ); 
+            z = {}
+            for(i = 0; i<a.length; i++){
+                if(z[a[i]] != undefined){
+                    z[a[i]]++;
+                }
+                else{
+                    z[a[i]] = 1;
+                }
+            }
+            size = Object.keys(z).length;
+            for(a in z){
+                document.getElementById('result').append(' ',a,'-',z[a]);
+                document.getElementById('result').append(document.createElement('br'));
+            }
+        }
+</script>
+    </body>
+</html>
